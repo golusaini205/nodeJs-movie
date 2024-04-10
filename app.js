@@ -80,8 +80,8 @@ app.post('/movies/', async (request, response) => {
   const {directorId, movieName, leadActor} = request.body
   const postmovieQuery = `
     INSERT INTO
-      movie_id (director_id, movie_name, lead_actor)
-    VALUE 
+      movie (director_id, movie_name, lead_actor)
+    VALUES 
       ('${directorId}', '${movieName}' '${leadActor}');
   `
 
@@ -115,7 +115,7 @@ app.delete('/movies/:movieId/', async (request, response) => {
   const {movieId} = request.params
   const deleteMovieArray = `
   DELETE FROM 
-    movie_id
+    movie
   WHERE 
     movie_id = ${movieId};
   `

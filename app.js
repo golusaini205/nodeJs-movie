@@ -22,7 +22,7 @@ const initilizeDBAndServer = async () => {
     })
   } catch (e) {
     console.log(`DB Error ${e.message}`)
-    prcess.exit(1)
+    process.exit(1)
   }
 }
 
